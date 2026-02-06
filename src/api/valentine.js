@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://valentine-backend-enzy.onrender.com";
 
 export async function createValentine(data) {
   const res = await fetch(`${API_BASE}/valentines`, {
