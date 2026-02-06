@@ -1,0 +1,29 @@
+.result{
+  min-height: 100vh;
+  background: url("/bg.jpg") no-repeat center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.result-page {
+  background: #fff6f9;
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+    .link-container p{
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    .link-container p strong{
+        font-weight: 900;
+        
+    }
+}
