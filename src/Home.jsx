@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 function Home() {
-  const navigate = useNavigate(); // <-- Must be inside the component
+const navigate = useNavigate(); // <-- Must be inside the component
   const [formData, setFormData] = useState({
     senderName: "",
     receiverName: "",
@@ -34,7 +34,7 @@ function Home() {
   try {
      const result = await createValentine(formData);
      // Redirect to ResultPage
-     navigate(`/result/${result.code}`);
+     navigate(`/valentines/${code}/result`);
     } catch (err) {
         setError(err.message);
     } finally {
