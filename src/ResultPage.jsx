@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ResultPage.css";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://valentine-backend-enzy.onrender.com";
 
 export default function ResultPage() {
   const { code } = useParams();
