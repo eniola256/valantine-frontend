@@ -16,3 +16,27 @@ export async function createValentine(data) {
 
   return res.json();
 }
+
+// Add this function for fetching results
+export async function getValentineResult(id) {
+  const res = await fetch(`${API_BASE}/valentines/${id}/result`);
+
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.error || "Failed to fetch result");
+  }
+
+  return res.json();
+}
+
+// You might also need this one
+export async function getAllValentines() {
+  const res = await fetch(`${API_BASE}/valentines`);
+
+  if (!res.ok) {
+    const err = await res.json();
+    throw new Error(err.error || "Failed to fetch valentines");
+  }
+
+  return res.json();
+}
