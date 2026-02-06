@@ -8,8 +8,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/v/:code" element={<ViewValentine />} />
-      <Route path="/result/:code" element={<ResultPage />} />
+      <Route path="/valentines/:code/result" element={<ResultPage />} />
     </Routes>
   );
 }
-

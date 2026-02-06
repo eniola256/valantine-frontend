@@ -18,8 +18,8 @@ export async function createValentine(data) {
 }
 
 // Add this function for fetching results
-export async function getValentineResult(id) {
-  const res = await fetch(`${API_BASE}/valentines/${id}/result`);
+export async function getValentineResult(code) {
+  const res = await fetch(`${API_BASE}/result/${code}`);
 
   if (!res.ok) {
     const err = await res.json();
