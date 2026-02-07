@@ -112,6 +112,17 @@ const navigate = useNavigate(); // <-- Must be inside the component
         {error && <p className="error">{error}</p>}
         
       </div>
+      <footer className="footer">
+        <p>© {new Date().getFullYear()} Valentine App, AE Tech. All rights reserved.</p>
+
+        <button
+            className="footer-btn"
+            onClick={() => window.open("https://wa.link/woj0hb")}
+        >
+            Need custom? <br /> Contact me
+        </button>
+        </footer>
+
     </div>
   );
 }
