@@ -1,12 +1,12 @@
 const API_BASE = "https://valentine-backend-enzy.onrender.com";
 
-export async function createValentine(data) {
-  const res = await fetch(`${API_BASE}/valentines/${code}/result`, {
+export async function createValentine(formData) {
+  const res = await fetch(`${API_BASE}/valentines`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(formData),
   });
 
   if (!res.ok) {
@@ -14,8 +14,10 @@ export async function createValentine(data) {
     throw new Error(err.error || "Failed to create Valentine");
   }
 
-  return res.json();
+  const data = await res.json(); // { code }
+  return data;
 }
+
 
 // Add this function for fetching results
 export async function getValentineResult(code) {

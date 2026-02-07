@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 
 function Home() {
+
+    
 const navigate = useNavigate(); // <-- Must be inside the component
   const [formData, setFormData] = useState({
     senderName: "",
@@ -13,7 +15,8 @@ const navigate = useNavigate(); // <-- Must be inside the component
     anonymous: false
   });
 
-  const [linkCode, setLinkCode] = useState(null);
+  
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
