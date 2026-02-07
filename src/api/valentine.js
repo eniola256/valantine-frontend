@@ -1,7 +1,7 @@
 const API_BASE = "https://valentine-backend-enzy.onrender.com";
 
 export async function createValentine(data) {
-  const res = await fetch(`${API_BASE}/valentines`, {
+  const res = await fetch(`${API_BASE}/valentines/${code}/result`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

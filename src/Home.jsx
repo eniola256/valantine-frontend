@@ -34,7 +34,7 @@ const navigate = useNavigate(); // <-- Must be inside the component
   try {
      const result = await createValentine(formData);
      // Redirect to ResultPage
-     navigate(`/valentines/${code}/result`);
+     navigate(`/valentines/${result.code}/result`);
     } catch (err) {
         setError(err.message);
     } finally {
