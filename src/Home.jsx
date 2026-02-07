@@ -107,13 +107,7 @@ const navigate = useNavigate(); // <-- Must be inside the component
         </form>
 
         {error && <p className="error">{error}</p>}
-
-        {linkCode && (
-          <div className="result">
-            <p>Share this link:</p>
-            <code>{window.location.origin}/v/{linkCode}</code>
-          </div>
-        )}
+        
       </div>
     </div>
   );
